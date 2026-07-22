@@ -1,0 +1,125 @@
+<!doctype html>
+<html lang="pt-BR">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="description" content="Arkkhe Studio — design, technology e narrativas para experiências além da realidade." />
+    <title>Arkkhe — Studio</title>
+    <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'><text y='.85em' font-size='64'>✣</text></svg>" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link rel="preload" as="image" href="assets/sky.png" />
+    <link rel="preload" as="image" href="assets/reality-ground.png" />
+    <link rel="preload" as="image" href="assets/reality-clouds.png" />
+    <script>
+      try {
+        const skyPosition = JSON.parse(sessionStorage.getItem('arkkhe-route-sky-position') || 'null');
+        if (skyPosition) {
+          document.documentElement.style.setProperty('--arrival-sky-x', skyPosition.x);
+          document.documentElement.style.setProperty('--arrival-sky-y', skyPosition.y);
+          document.documentElement.style.setProperty('--arrival-nx', String(skyPosition.nx || 0));
+          document.documentElement.style.setProperty('--arrival-ny', String(skyPosition.ny || 0));
+          document.documentElement.style.setProperty('--arrival-ground-x', skyPosition.groundX || '0px');
+          document.documentElement.style.setProperty('--arrival-ground-y', skyPosition.groundY || '0px');
+          document.documentElement.style.setProperty('--arrival-cloud-x', skyPosition.cloudX || '0px');
+          document.documentElement.style.setProperty('--arrival-cloud-y', skyPosition.cloudY || '0px');
+          sessionStorage.removeItem('arkkhe-route-sky-position');
+        }
+      } catch (_) {}
+    </script>
+    <link href="https://fonts.googleapis.com/css2?family=Imprima&family=Viaoda+Libre&display=optional" rel="stylesheet" />
+    <link rel="stylesheet" href="studio.css?v=59" />
+    <link rel="stylesheet" href="transition.css?v=38" />
+  </head>
+  <body class="is-loading">
+    <div class="page-noise" aria-hidden="true"></div>
+
+    <header class="topbar">
+      <button class="menu-button" aria-label="Abrir menu" aria-expanded="false"><span></span><span></span></button>
+      <nav class="nav nav--left" aria-label="Navegação principal">
+        <a href="index.html">Home</a><a class="active" href="#studio">Studio</a><a href="premium.html">Experiences</a>
+      </nav>
+      <a class="brand" href="index.html" data-home-transition aria-label="Arkkhe — voltar para a página inicial">✣</a>
+      <nav class="nav nav--right" aria-label="Navegação secundária">
+        <a href="technologies.html">Technologies</a><a href="#journal">Journal</a><a href="#contact">Contact</a>
+      </nav>
+      <nav class="mobile-nav" aria-label="Menu móvel">
+        <a href="index.html">Home</a><a href="#studio">Studio</a><a href="premium.html">Experiences</a><a href="technologies.html">Technologies</a><a href="#journal">Journal</a><a href="#contact">Contact</a>
+      </nav>
+    </header>
+
+    <main>
+      <section class="studio-hero" id="studio">
+        <div class="studio-hero__sky" aria-hidden="true"></div>
+        <div class="studio-hero__atmosphere" aria-hidden="true"></div>
+        <div class="studio-hero__halo" aria-hidden="true"><i></i><i></i><i></i></div>
+        <img class="studio-hero__land" src="assets/reality-ground.png" alt="" decoding="sync" fetchpriority="high" aria-hidden="true" />
+        <img class="studio-hero__clouds" src="assets/reality-clouds.png" alt="" decoding="sync" fetchpriority="high" aria-hidden="true" />
+        <div class="studio-hero__frame" aria-hidden="true"></div>
+        <h1><span>Architects of</span><strong>the unseen</strong></h1>
+        <p class="studio-hero__intro reveal">We shape digital worlds where imagination becomes tangible — and every interaction opens a door to wonder.</p>
+        <aside class="studio-hero__ledger reveal" aria-label="Nossa prática">
+          <span>One vision / three forces</span>
+          <ol><li><b>01</b> Strategy</li><li><b>02</b> Design</li><li><b>03</b> Technology</li></ol>
+        </aside>
+        <a class="scroll-cue reveal" href="#manifesto" aria-label="Conheça o estúdio">
+          <span>Discover our world</span><i>↓</i>
+        </a>
+      </section>
+
+      <div class="studio-marquee" aria-hidden="true"><div><span>Emotion before interface</span><i>✣</i><span>Wonder through technology</span><i>✣</i><span>Emotion before interface</span><i>✣</i><span>Wonder through technology</span><i>✣</i></div></div>
+
+      <section class="manifesto" id="manifesto">
+        <div class="section-index reveal"><span>01</span><span>Our belief</span></div>
+        <div class="manifesto__copy reveal">
+          <p class="lead">The future should not feel cold.</p>
+          <h2>We believe technology is at its most powerful when it makes us <em>feel more human.</em></h2>
+        </div>
+        <div class="manifesto__aside reveal">
+          <p>Arkkhe is a creative studio exploring the space between physical and digital. We unite strategy, design, motion and emerging technology to create experiences people remember.</p>
+          <p>Not decoration. Not spectacle for its own sake. Every world begins with a clear idea and ends with a meaningful feeling.</p>
+        </div>
+      </section>
+
+      <section class="disciplines" id="disciplines">
+        <div class="section-index reveal"><span>02</span><span>What we shape</span></div>
+        <div class="disciplines__heading reveal">
+          <p>From first thought<br />to final world.</p>
+          <h2>One vision.<br /><em>Many dimensions.</em></h2>
+        </div>
+        <div class="discipline-list">
+          <article class="discipline reveal"><span>01</span><h3>Creative Direction</h3><p>Concept, strategy and visual systems that give every experience a soul.</p><i>↗</i></article>
+          <article class="discipline reveal"><span>02</span><h3>Immersive Design</h3><p>Digital spaces, interactive stories and interfaces built around discovery.</p><i>↗</i></article>
+          <article class="discipline reveal"><span>03</span><h3>Emerging Technology</h3><p>AI, real-time 3D and spatial computing transformed into human moments.</p><i>↗</i></article>
+          <article class="discipline reveal"><span>04</span><h3>Motion & Worlds</h3><p>Movement, atmosphere and sound that turn screens into living places.</p><i>↗</i></article>
+        </div>
+      </section>
+
+      <section class="selected-work" id="journal">
+        <div class="section-index reveal"><span>03</span><span>Selected realities</span></div>
+        <div class="selected-work__heading reveal"><p>Worlds created to be<br />felt, not just seen.</p><h2>Signals from<br /><em>another place.</em></h2></div>
+        <div class="work-grid">
+          <a class="work-card work-card--wide reveal" href="#contact"><img src="assets/demo.png" alt="Arquitetura surreal entre céu e oceano" /><span><b>01 / Immersive world</b><strong>Aether House</strong><i>View story ↗</i></span></a>
+          <a class="work-card reveal" href="#contact"><img src="assets/partners.png" alt="Paisagem arquitetônica surreal" /><span><b>02 / Spatial identity</b><strong>Beyond Form</strong><i>View story ↗</i></span></a>
+          <a class="work-card reveal" href="#contact"><img src="assets/experience.png" alt="Corredor imersivo em tons pastel" /><span><b>03 / Digital experience</b><strong>Portals</strong><i>View story ↗</i></span></a>
+        </div>
+      </section>
+
+      <section class="principle" id="philosophy">
+        <div class="principle__orb" aria-hidden="true"><div></div></div>
+        <div class="section-index reveal"><span>04</span><span>Our north star</span></div>
+        <blockquote class="reveal">“Create what cannot be ignored.<br />Design what cannot be forgotten.”</blockquote>
+        <p class="reveal">We are a small, senior team by design — close to every detail, open to every possibility.</p>
+      </section>
+
+      <footer id="contact">
+        <p>Have an impossible idea?</p>
+        <a href="mailto:hello@arkkhe.studio">Let’s make it real <span>↗</span></a>
+        <div class="footer__meta"><span>© 2026 Arkkhe Studio</span><span>São Paulo · 23°33′S 46°38′W</span><a href="#studio">Back to top ↑</a></div>
+      </footer>
+    </main>
+
+    <script src="transition.js?v=38"></script>
+    <script src="studio.js?v=51"></script>
+  </body>
+</html>

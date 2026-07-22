@@ -1,0 +1,106 @@
+body.route-native-tunnel{overflow:hidden}
+body.route-native-tunnel .hero.is-route-page-dive .reality__copy,body.route-native-tunnel .hero.is-route-page-dive .experience-object{display:none}
+body.route-native-tunnel .hero.is-route-page-dive .topbar{transform-origin:50% 0;animation:route-header-zoom 1.85s 1.15s both cubic-bezier(.22,1,.36,1)!important;will-change:opacity,scale}
+.route-page-preview{position:absolute;z-index:7;inset:0;display:none;padding:100px 6vw 70px;text-align:center;pointer-events:none}
+body.route-native-tunnel .route-page-preview{display:block}
+.route-page-preview h2{position:absolute;z-index:2;left:50%;top:calc(50% + 15px);width:100%;margin:0;transform:translate3d(-50%,-50%,0);font:400 clamp(64px,9.3vw,178px)/.72 "Viaoda Libre",serif;text-transform:uppercase;letter-spacing:-.035em;text-shadow:0 8px 50px rgba(0,0,0,.28);animation:destination-title 1.85s 1.15s both cubic-bezier(.22,1,.36,1);backface-visibility:hidden}
+.route-page-preview h2 span,.route-page-preview h2 strong{display:block;font-weight:400}.route-page-preview h2 span{transform:translateX(-.12em)}.route-page-preview h2 strong{font-size:.82em;font-style:italic;transform:translateX(.14em);color:#e6ddec}
+.route-page-preview--premium{overflow:hidden;background:#171026;padding:0}.route-page-preview__premium-sky{position:absolute;z-index:0;inset:-6%;background:url("assets/sky.png") 50% 50%/cover no-repeat;filter:hue-rotate(8deg) saturate(.88) brightness(.72);transform:scale(1.11)}.route-page-preview__premium-veil{position:absolute;z-index:1;inset:0;background:radial-gradient(circle at 50% 47%,rgba(229,196,214,.13),transparent 29%),linear-gradient(90deg,rgba(10,7,14,.36),transparent 31% 69%,rgba(10,7,14,.36))}.route-page-preview--premium::after{content:"";position:absolute;z-index:8;inset:0;background:linear-gradient(180deg,rgba(9,6,16,.28),transparent 52%,rgba(7,5,10,.5));pointer-events:none}
+.route-page-preview__premium-portal{position:absolute;z-index:2;left:50%;top:49%;width:min(46vw,660px);aspect-ratio:1;transform:translate(-50%,-50%);border:1px solid rgba(255,235,228,.18);border-radius:50%;box-shadow:0 0 95px rgba(196,145,177,.12),inset 0 0 70px rgba(242,213,200,.04);animation:route-halo-arrival 1.85s 1.15s both cubic-bezier(.22,1,.36,1)}.route-page-preview__premium-portal::before{content:"";position:absolute;inset:17%;border:1px solid rgba(255,255,255,.08);border-radius:50%}.route-page-preview__premium-portal i{position:absolute;border:1px solid rgba(255,255,255,.07);border-radius:50%}.route-page-preview__premium-portal i:nth-child(1){inset:28%}.route-page-preview__premium-portal i:nth-child(2){inset:38%}.route-page-preview__premium-portal i:nth-child(3){display:none}.route-page-preview__premium-portal i::after{content:"";position:absolute;top:10%;left:18%;width:3px;height:3px;border-radius:50%;background:#fff;box-shadow:0 0 12px #fff}
+.route-page-preview__premium-artifact{position:absolute;z-index:5;left:50%;top:50%;width:min(15.8vw,245px);height:min(54vh,560px);margin:0;border-radius:150px;overflow:hidden;transform:translate(-50%,-50%);box-shadow:0 38px 90px rgba(5,3,10,.58),0 0 0 1px rgba(255,255,255,.3);animation:route-premium-artifact-arrival 1.85s 1.15s both cubic-bezier(.22,1,.36,1)}.route-page-preview__premium-artifact::after{content:"";position:absolute;inset:0;background:linear-gradient(150deg,rgba(255,255,255,.12),transparent 38%,rgba(25,8,30,.2))}.route-page-preview__premium-artifact img{width:100%;height:100%;object-fit:cover;object-position:53% center;filter:saturate(.76) contrast(1.01) brightness(.92);transform:scale(1.03)}
+.route-page-preview--premium h2{position:absolute;z-index:6;inset:0;margin:0;transform:none;text-align:left;font:400 clamp(64px,8.1vw,156px)/.76 "Viaoda Libre",serif;letter-spacing:-.045em;text-shadow:0 10px 55px rgba(0,0,0,.29);pointer-events:none;animation:route-meta-in 1.85s 1.15s both ease-out}.route-page-preview--premium h2 span,.route-page-preview--premium h2 strong{position:absolute;top:49%;display:block;font-weight:400;white-space:nowrap}.route-page-preview--premium h2 span{right:calc(50% + clamp(118px,9.4vw,150px));transform:translateY(-58%);text-align:right}.route-page-preview--premium h2 strong{left:calc(50% + clamp(118px,9.4vw,150px));transform:translateY(5%);font-size:.74em;font-style:italic;color:#eadde5}
+.route-page-preview__premium-eyebrow{position:absolute!important;z-index:10!important;left:6vw!important;top:17%!important;bottom:auto!important;width:auto!important;display:flex;gap:35px;margin:0!important;text-transform:uppercase;text-align:left!important;font-size:8px!important;line-height:1!important;letter-spacing:.22em;color:rgba(255,255,255,.62)!important;animation:route-meta-in 1.85s 1.15s both ease-out!important}.route-page-preview__premium-eyebrow span+span{padding-left:35px;border-left:1px solid rgba(255,255,255,.25)}.route-page-preview__premium-intro{position:absolute!important;z-index:10!important;left:6vw!important;bottom:10%!important;top:auto!important;width:260px!important;margin:0!important;text-align:left!important;font-size:14px!important;line-height:1.5!important;color:rgba(255,255,255,.76)!important;animation:route-meta-in 1.85s 1.15s both ease-out!important}
+.route-page-preview__premium-edition{position:absolute;z-index:10;right:6vw;top:16%;width:205px;padding:18px;border:1px solid rgba(255,255,255,.16);background:rgba(30,16,38,.13);backdrop-filter:blur(8px);text-align:left;font-style:normal;animation:route-meta-in 1.85s 1.15s both ease-out}.route-page-preview__premium-edition>span{font-size:8px;letter-spacing:.2em;text-transform:uppercase;color:rgba(255,255,255,.5)}.route-page-preview__premium-edition b{display:block;margin:8px 0 -5px;font:400 68px/1 "Viaoda Libre",serif;color:#e5cfdd}.route-page-preview__premium-edition p{position:static!important;width:auto!important;margin:0!important;padding-top:10px;border-top:1px solid rgba(255,255,255,.12);text-align:left!important;font-size:11px!important;line-height:1.45!important;color:rgba(255,255,255,.66)!important;animation:none!important}
+.route-page-preview--premium .route-page-preview__frame{z-index:7}.route-page-preview--premium .route-page-preview__cue{z-index:10}
+.route-page-preview p{position:absolute;z-index:2;left:6vw;bottom:11%;width:280px;margin:0;text-align:left;font-size:14px;line-height:1.45;color:rgba(255,255,255,.72);animation:destination-subtitle 1.85s 1.15s both cubic-bezier(.22,1,.36,1)}
+.route-page-preview__cue{position:absolute;z-index:2;right:6vw;bottom:10%;display:flex;align-items:center;gap:18px;text-transform:uppercase;font-size:9px;letter-spacing:.2em;animation:route-meta-in 1.85s 1.15s both ease-out}.route-page-preview__cue i{width:46px;height:46px;border:1px solid rgba(255,255,255,.38);border-radius:50%;display:grid;place-items:center;font-style:normal;font-size:18px}
+.route-page-preview__frame{position:absolute;z-index:2;inset:92px 3.2vw 38px;border:1px solid rgba(255,255,255,.11);animation:route-meta-in 1.85s 1.15s both ease-out;contain:layout paint;transform:translateZ(0);backface-visibility:hidden}
+.route-page-preview__ledger{position:absolute;z-index:3;right:6vw;top:17%;width:215px;padding:18px 20px;border:1px solid rgba(255,255,255,.15);background:rgba(29,23,52,.17);backdrop-filter:blur(8px);font-style:normal;animation:route-meta-in 1.85s 1.15s both ease-out}.route-page-preview__ledger>span{display:block;margin-bottom:14px;font-size:8px;letter-spacing:.2em;text-transform:uppercase;color:rgba(255,255,255,.5)}.route-page-preview__ledger ol{list-style:none;margin:0;padding:0}.route-page-preview__ledger li{display:flex;gap:13px;padding:8px 0;border-top:1px solid rgba(255,255,255,.11);font:18px/1 "Viaoda Libre",serif}.route-page-preview__ledger b{font:8px/2 "Imprima",sans-serif;color:rgba(255,255,255,.45)}
+.route-page-preview__halo{position:absolute;z-index:1;left:50%;top:47%;width:min(54vw,790px);aspect-ratio:1;transform:translate(-50%,-50%);border:1px solid rgba(255,238,224,.27);border-radius:50%;box-shadow:0 0 100px rgba(185,158,255,.12),inset 0 0 80px rgba(255,218,198,.08);animation:route-halo-arrival 1.85s 1.15s both cubic-bezier(.22,1,.36,1);will-change:transform,opacity;backface-visibility:hidden}
+.route-page-preview__halo::before{content:"";position:absolute;inset:12%;border-radius:50%;background:radial-gradient(circle at 48% 40%,rgba(255,246,230,.24),rgba(143,118,186,.08) 35%,rgba(11,9,27,.2) 61%,transparent 64%);box-shadow:0 0 50px rgba(231,205,255,.08)}
+.route-page-preview__halo i{position:absolute;inset:7%;border:1px solid rgba(255,255,255,.1);border-radius:50%}.route-page-preview__halo i:nth-child(2){inset:18%}.route-page-preview__halo i:nth-child(3){inset:31%}
+.route-page-preview__halo i::after{content:"";position:absolute;top:11%;left:16%;width:5px;height:5px;border-radius:50%;background:#fff8ee;box-shadow:0 0 15px #fff}
+@keyframes route-halo-arrival{from{opacity:0;transform:translate(-50%,-50%) scale(.251)}to{opacity:1;transform:translate(-50%,-50%) scale(1)}}
+@keyframes route-premium-artifact-arrival{from{opacity:0;transform:translate(-50%,-50%) scale(.251)}to{opacity:1;transform:translate(-50%,-50%) scale(1)}}
+@keyframes route-meta-in{from{opacity:0}to{opacity:1}}
+@keyframes route-header-zoom{from{opacity:0;scale:.72}to{opacity:1;scale:1}}
+body.route-reverse-leaving{overflow:hidden;pointer-events:none}
+
+body.is-route-arrival .garden-loader{display:block;background:transparent}
+body.is-route-arrival .garden-loader span{display:none}
+body.is-route-arrival .garden-loader__side--left{animation:none;transform:translate(calc(-7vw + var(--fg-x)),var(--fg-y)) scale(1);filter:brightness(1)}
+body.is-route-arrival .garden-loader__side--right{animation:none;transform:translate(calc(-3vw + var(--fg-neg-x)),var(--fg-y)) scale(1);filter:brightness(1)}
+body.is-route-arrival .hero__sky{opacity:1;transform:scale(1.1);animation:none}
+body.is-route-arrival .hero__scene::after{opacity:1;transform:scale(1.045);animation:none}
+body.is-route-arrival .topbar,body.is-route-arrival .intro h1,body.is-route-arrival .carousel,body.is-route-arrival .intro p,body.is-route-arrival .enter{opacity:1;animation:none}
+
+body.is-route-arrival .hero.is-route-reversing .tunnel-stage{visibility:visible;opacity:1;animation:route-tunnel-backward 1.85s both cubic-bezier(.16,1,.3,1)}
+body.is-route-arrival .hero.is-route-reversing .topbar{animation:route-content-back 1.85s both ease-out}
+body.is-route-arrival .hero.is-route-reversing .reality{visibility:hidden;opacity:0;transition:none;animation:none}
+body.is-route-arrival .hero.is-route-reversing .reality__copy,body.is-route-arrival .hero.is-route-reversing .experience-object{display:none}
+body.is-route-arrival .hero.is-route-reversing .intro h1,body.is-route-arrival .hero.is-route-reversing .intro p,body.is-route-arrival .hero.is-route-reversing .carousel,body.is-route-arrival .hero.is-route-reversing .enter{animation:route-content-back 1.85s both ease-out}
+
+@keyframes route-tunnel-backward{from{transform:scale(2.65)}to{transform:scale(1)}}
+@keyframes route-content-back{0%,58%{opacity:0}100%{opacity:1}}
+
+@media(max-width:900px){.route-page-preview__ledger{display:none}}@media(max-width:560px){.route-page-preview__frame{inset:86px 14px 18px}.route-page-preview__frame span:last-child{display:none}}
+@media(prefers-reduced-motion:reduce){body.is-route-arrival .hero.is-route-reversing .tunnel-stage{animation-duration:.2s}}
+
+/* Technologies destination preview — mirrors the real hero so the route lands
+   on the exact same image, crop, typography and interface state. */
+.route-page-preview--technologies{overflow:hidden;background:#090810;padding:0;text-align:left}
+.route-page-preview--technologies::after{content:"";position:absolute;z-index:5;inset:0;background:linear-gradient(90deg,rgba(7,6,11,.58),transparent 42% 64%,rgba(6,5,10,.26)),linear-gradient(180deg,rgba(7,6,11,.1),transparent 60%,rgba(7,6,11,.62));pointer-events:none}
+.route-page-preview__technology-image{position:absolute;z-index:0;inset:-5%;background:url("assets/sky_technologie_1.webp") 50% 50%/cover no-repeat;filter:saturate(.78) brightness(.72) contrast(1.08);transform:scale(1.07);animation:route-technology-image-arrival 1.85s 1.15s both cubic-bezier(.22,1,.36,1);will-change:transform,opacity}
+.route-page-preview__technology-mesh{position:absolute;z-index:2;inset:0;opacity:.23;background-image:linear-gradient(rgba(255,255,255,.08) 1px,transparent 1px),linear-gradient(90deg,rgba(255,255,255,.08) 1px,transparent 1px);background-size:7.15vw 7.15vw;mask-image:linear-gradient(90deg,#000,transparent 47%,transparent 67%,#000);animation:route-meta-in 1.85s 1.15s both ease-out}
+.route-page-preview__technology-scan{position:absolute;z-index:3;left:49.7%;top:18%;width:1px;height:64%;background:linear-gradient(transparent,#9dd8df,transparent);box-shadow:0 0 18px #9dd8df;opacity:.42;animation:route-meta-in 1.85s 1.15s both ease-out}
+.route-page-preview__technology-scan::after{content:"";position:absolute;top:50%;left:50%;width:6px;height:6px;border:1px solid #9dd8df;border-radius:50%;transform:translate(-50%,-50%);box-shadow:0 0 18px #9dd8df}
+.route-page-preview--technologies .route-page-preview__frame{z-index:7;inset:92px 3.2vw 36px}
+.route-page-preview--technologies h2{position:absolute;z-index:6;left:6vw;top:46%;width:auto;margin:0;transform:translateY(-50%);text-align:left;text-transform:uppercase;font:400 clamp(67px,9.2vw,174px)/.76 "Viaoda Libre",serif;letter-spacing:-.052em;text-shadow:0 14px 55px rgba(0,0,0,.45);animation:route-technology-title-arrival 1.85s 1.15s both cubic-bezier(.22,1,.36,1)}
+.route-page-preview--technologies h2 span,.route-page-preview--technologies h2 strong{display:block;position:static;transform:none;font-weight:400;white-space:nowrap}
+.route-page-preview--technologies h2 strong{margin-left:14vw;font-size:.58em;font-style:italic;text-transform:none;color:#e7d5e3}
+.route-page-preview__technology-eyebrow{position:absolute!important;z-index:10!important;left:6vw!important;top:16%!important;bottom:auto!important;width:auto!important;display:flex;gap:35px;margin:0!important;text-align:left!important;text-transform:uppercase;font-size:8px!important;line-height:1!important;letter-spacing:.2em;color:rgba(255,255,255,.62)!important;animation:route-meta-in 1.85s 1.15s both ease-out!important}
+.route-page-preview__technology-eyebrow span+span{padding-left:35px;border-left:1px solid rgba(255,255,255,.24)}
+.route-page-preview__technology-intro{position:absolute!important;z-index:10!important;left:6vw!important;bottom:9.5%!important;top:auto!important;width:305px!important;margin:0!important;text-align:left!important;font-size:14px!important;line-height:1.55!important;color:rgba(255,255,255,.74)!important;animation:route-meta-in 1.85s 1.15s both ease-out!important}
+.route-page-preview__technology-readout{position:absolute;z-index:10;right:6vw;top:15%;width:215px;padding:18px;border:1px solid rgba(255,255,255,.16);background:rgba(15,10,22,.12);backdrop-filter:blur(9px);font-style:normal;animation:route-meta-in 1.85s 1.15s both ease-out}
+.route-page-preview__technology-readout>span{font-size:8px;letter-spacing:.19em;text-transform:uppercase;color:rgba(255,255,255,.54)}
+.route-page-preview__technology-readout div{display:flex;align-items:flex-start;margin:11px 0 5px}.route-page-preview__technology-readout b{font:400 66px/.9 "Viaoda Libre",serif;color:#ead5df}.route-page-preview__technology-readout i{margin-top:7px;font:10px/1 "Imprima",sans-serif;color:#9dd8df}
+.route-page-preview__technology-readout p{position:static!important;width:auto!important;margin:0!important;padding-top:12px;border-top:1px solid rgba(255,255,255,.12);text-align:left!important;font-size:10px!important;line-height:1.5!important;color:rgba(255,255,255,.64)!important;animation:none!important}
+.route-page-preview__technology-coordinates{position:absolute;z-index:10;right:6vw;bottom:9.5%;display:flex;gap:26px;font-size:8px;letter-spacing:.15em;color:rgba(255,255,255,.46);animation:route-meta-in 1.85s 1.15s both ease-out}
+.route-page-preview__technology-cue{position:absolute;z-index:10;left:50%;bottom:7.2%;display:flex;align-items:center;gap:17px;transform:translateX(-50%);text-transform:uppercase;font-size:8px;letter-spacing:.2em;animation:route-meta-in 1.85s 1.15s both ease-out}
+.route-page-preview__technology-cue i{width:44px;height:44px;border:1px solid rgba(255,255,255,.36);border-radius:50%;display:grid;place-items:center;font-style:normal;font-size:17px}
+@keyframes route-technology-image-arrival{from{opacity:0;transform:scale(1.365)}to{opacity:1;transform:scale(1.07)}}
+@keyframes route-technology-title-arrival{from{opacity:0;transform:translateY(-50%) scale(.251)}to{opacity:1;transform:translateY(-50%) scale(1)}}
+@media(max-width:560px){.route-page-preview__technology-image{background-position:62% center}.route-page-preview--technologies h2{left:24px;top:40%;font-size:13.4vw;line-height:.78;letter-spacing:-.06em}.route-page-preview--technologies h2 strong{margin-left:0;font-size:.7em;white-space:normal}.route-page-preview__technology-eyebrow{left:24px!important;top:14%!important}.route-page-preview__technology-eyebrow span+span{display:none}.route-page-preview__technology-readout{right:24px;top:auto;bottom:7%;width:155px;padding:13px}.route-page-preview__technology-readout b{font-size:50px}.route-page-preview__technology-intro{left:24px!important;bottom:8%!important;width:155px!important;font-size:11px!important}.route-page-preview__technology-coordinates,.route-page-preview__technology-cue{display:none}.route-page-preview__technology-mesh{background-size:25vw 25vw}}
+
+/* Technologies bypasses the pink Home tunnel. The final hero is placed as a
+   fixed, opaque destination layer and remains visually unchanged across load. */
+body.route-direct-technology{overflow:hidden;pointer-events:none}
+body.route-direct-technology>.route-page-preview--technologies{display:block;position:fixed;z-index:80;opacity:1;transform:scale(1.018);transition:transform .9s cubic-bezier(.16,1,.3,1)}
+body.route-direct-technology.is-technology-preview-visible>.route-page-preview--technologies{transform:scale(1)}
+body.route-direct-technology>.route-page-preview--technologies *,body.route-direct-technology>.route-page-preview--technologies *::before,body.route-direct-technology>.route-page-preview--technologies *::after{animation:none!important}
+body.route-direct-technology>.topbar{position:fixed;z-index:90;top:0;left:0;width:100%;opacity:1!important;animation:none!important;transform:none!important}
+
+/* Home → Technologies keeps the native tunnel, but the world revealed inside
+   it is the technology hero itself — never the pink sky/reality scene. */
+body.route-technology-tunnel .reality{background:#090810}
+body.route-technology-tunnel .reality::before,body.route-technology-tunnel .reality::after,body.route-technology-tunnel .reality__clouds{display:none!important}
+body.route-technology-tunnel .route-page-preview--technologies{background:#090810}
+body.route-technology-tunnel .route-page-preview__technology-image{opacity:1;animation:route-technology-tunnel-background 3s both cubic-bezier(.22,1,.36,1)}
+@keyframes route-technology-tunnel-background{from{opacity:1;transform:scale(1.365)}to{opacity:1;transform:scale(1.07)}}
+
+/* New layered sky supplied for Technologies. */
+.route-page-preview__technology-image{background-image:url("assets/sky_technologie_1.webp");background-position:50% 50%;filter:saturate(.82) brightness(.62) contrast(1.06)}
+.route-page-preview__technology-ground{position:absolute;z-index:1;left:-4%;right:-4%;bottom:-3%;height:61%;background:url("assets/sky_technologie_2.webp") center bottom/100% auto no-repeat;filter:saturate(.82) brightness(.66) contrast(1.06);transform:scale(1.04);transform-origin:center bottom}
+body.route-technology-tunnel .route-page-preview__technology-ground{animation:route-technology-tunnel-ground 3s both cubic-bezier(.22,1,.36,1)}
+@keyframes route-technology-tunnel-ground{from{opacity:1;transform:translateY(7%) scale(1.18)}to{opacity:1;transform:translateY(0) scale(1.04)}}
+@media(max-width:560px){.route-page-preview__technology-image{background-position:58% center}.route-page-preview__technology-ground{left:-42%;right:-42%;height:55%;background-size:auto 100%}}
+
+/* Keep the tunnel reveal as luminous as the final Technologies hero. */
+.route-page-preview--technologies::after{background:linear-gradient(90deg,rgba(7,6,11,.28),transparent 35% 72%,rgba(6,5,10,.1)),linear-gradient(180deg,rgba(7,6,11,.04),transparent 68%,rgba(7,6,11,.3))}
+.route-page-preview__technology-image{filter:saturate(.98) brightness(.9) contrast(1.03)}
+.route-page-preview__technology-ground{filter:saturate(.98) brightness(.96) contrast(1.03)}
+
+/* Match Premium's entrance preview to the undimmed final hero. */
+.route-page-preview--premium::after{content:none}
+.route-page-preview__premium-sky{filter:none}
+.route-page-preview__premium-veil{display:none}

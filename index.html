@@ -1,0 +1,99 @@
+<!doctype html>
+<html lang="pt-BR">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="description" content="Arkkhe — experiências digitais além da realidade." />
+    <title>Arkkhe — Step Into Wonder</title>
+    <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'><text y='.85em' font-size='64'>✣</text></svg>" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link rel="preload" as="style" href="studio.css?v=59" />
+    <link rel="preload" as="script" href="studio.js?v=51" />
+    <link rel="preload" as="image" href="assets/sky.png" />
+    <link rel="preload" as="image" href="assets/reality-ground.png" />
+    <link rel="preload" as="image" href="assets/reality-clouds.png" />
+    <link rel="preload" as="image" href="assets/premium-portal.jpg" />
+    <link rel="preload" as="image" href="assets/sky_technologie_1.webp" />
+    <link rel="preload" as="image" href="assets/sky_technologie_2.webp" />
+    <link rel="prefetch" href="studio.html" />
+    <link rel="prefetch" href="premium.html" />
+    <link rel="prefetch" href="technologies.html" />
+    <link href="https://fonts.googleapis.com/css2?family=Imprima&family=Viaoda+Libre&display=optional" rel="stylesheet" />
+    <link rel="stylesheet" href="styles.css?v=50" />
+    <link rel="stylesheet" href="transition.css?v=38" />
+  </head>
+  <body class="is-loading">
+    <main class="hero">
+      <div class="hero__sky" aria-hidden="true"></div>
+      <div class="tunnel-stage">
+      <div class="hero__scene" aria-hidden="true"></div>
+      <div class="garden-loader" aria-hidden="true">
+        <div class="garden-loader__side garden-loader__side--left"></div>
+        <div class="garden-loader__side garden-loader__side--right"></div>
+        <span>Loading experience</span>
+      </div>
+      <div class="portal-zoom" aria-hidden="true"></div>
+      <div class="hero__shade"></div>
+
+      <section class="intro" id="home">
+        <h1><span>Step <b>›</b> Into</span><strong>Wonder</strong></h1>
+        <p>Designing immersive digital experiences that blur the line between imagination, AI, and reality.</p>
+      </section>
+
+      <section class="carousel" id="experiences" aria-label="Experiências em destaque">
+        <div class="carousel__track">
+          <article class="card" data-index="0">
+            <img src="assets/demo.png" alt="Arquitetura surreal em tons de azul" />
+            <div class="card__caption"><button aria-label="Assistir demonstração">▶</button><span>Watch<br />Demo</span></div>
+          </article>
+          <article class="card is-active" data-index="1">
+            <img src="assets/partners.png" alt="Paisagem arquitetônica surreal" />
+            <div class="card__caption"><strong>32</strong><span>Global<br />Partners</span></div>
+          </article>
+          <article class="card" data-index="2">
+            <img src="assets/experience.png" alt="Corredor imersivo" />
+            <div class="card__caption"><button aria-label="Assistir demonstração">▶</button><span>Watch<br />Demo</span></div>
+          </article>
+        </div>
+        <div class="dots" aria-label="Selecionar experiência">
+          <button data-slide="0" aria-label="Slide 1"></button><button class="active" data-slide="1" aria-label="Slide 2"></button><button data-slide="2" aria-label="Slide 3"></button><button data-slide="0" aria-label="Slide 4"></button>
+        </div>
+      </section>
+
+      <a class="enter" href="#experiences" aria-label="Entrar na experiência">
+        <svg class="enter__text" viewBox="0 0 120 120" aria-hidden="true">
+          <defs><path id="enter-circle" d="M 60,60 m -42,0 a 42,42 0 1,1 84,0 a 42,42 0 1,1 -84,0" /></defs>
+          <text><textPath href="#enter-circle" startOffset="0%">ENTER EXPERIENCE · ENTER EXPERIENCE · </textPath></text>
+        </svg>
+        <i class="enter__icon"><b>⌃</b><b>⌄</b></i>
+      </a>
+      </div>
+
+      <header class="topbar">
+        <button class="menu-button" aria-label="Abrir menu" aria-expanded="false"><span></span><span></span></button>
+        <nav class="nav nav--left" aria-label="Navegação principal">
+          <a class="active" href="#home">Home</a><a href="studio.html">Studio</a><a href="premium.html">Experiences</a>
+        </nav>
+        <a class="brand" href="#home" aria-label="Arkkhe"><img src="assets/logo.svg" alt="" /></a>
+        <nav class="nav nav--right">
+          <a href="technologies.html">Technologies</a><a href="studio.html#journal">Journal</a><a href="studio.html#contact">Contact</a>
+        </nav>
+      </header>
+
+      <section class="reality" aria-hidden="true">
+        <div class="reality__clouds"></div>
+        <div class="reality__copy">
+          <h2>Create Beyond Reality</h2>
+          <p>Exclusive journeys to breathtaking destinations curated for travelers seeking rare and unforgettable experiences.</p>
+          <a class="reality__premium" href="premium.html">Discover Premium <span>↗</span></a>
+        </div>
+        <div class="experience-object" aria-label="Experiências exclusivas" role="region" aria-roledescription="carrossel" tabindex="0">
+          <div class="experience-deck"></div>
+        </div>
+      </section>
+    </main>
+    <script src="transition.js?v=38"></script>
+    <script src="script.js?v=49"></script>
+  </body>
+</html>
