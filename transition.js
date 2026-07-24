@@ -5,6 +5,14 @@
   const arrival = sessionStorage.getItem(TRANSITION_KEY);
   const homeLayerSources = ['assets/sky.png', 'assets/background.png', 'assets/left.png', 'assets/right.png'];
   let homeLayersReady;
+  const setNavigationActive = (label) => {
+    document.querySelectorAll('.topbar nav a').forEach((anchor) => {
+      const isActive = anchor.textContent.trim() === label;
+      anchor.classList.toggle('active', isActive);
+      if (isActive) anchor.setAttribute('aria-current', 'page');
+      else anchor.removeAttribute('aria-current');
+    });
+  };
   const ensureHomeLayersReady = () => {
     if (homeLayersReady) return homeLayersReady;
     homeLayersReady = Promise.all(homeLayerSources.map((src) => new Promise((resolve) => {
@@ -89,9 +97,7 @@
       document.body.appendChild(preview);
 
       const routeNav = document.querySelector('.topbar');
-      routeNav?.querySelectorAll('a').forEach((anchor) => anchor.classList.remove('active'));
-      const rightNav = routeNav?.querySelector('.nav--right');
-      if (rightNav) rightNav.innerHTML = '<a class="active" href="#technologies">Technologies</a><a href="#research">Research</a><a href="#contact">Contact</a>';
+      setNavigationActive('Technologies');
       if (routeNav) document.body.appendChild(routeNav);
 
       const destinationImage = new Image();
@@ -133,33 +139,25 @@
       if (isTechnologyDestination) document.body.classList.add('route-technology-tunnel');
       homeHero.classList.add('is-route-page-dive');
       if (url.pathname.endsWith('/studio.html')) {
+        setNavigationActive('Studio');
         const preview = document.createElement('div');
         preview.className = 'route-page-preview';
         preview.innerHTML = '<div class="route-page-preview__halo" aria-hidden="true"><i></i><i></i><i></i></div><div class="route-page-preview__frame" aria-hidden="true"></div><h2><span>Architects of</span><strong>the unseen</strong></h2><p>We shape digital worlds where imagination becomes tangible — and every interaction opens a door to wonder.</p><aside class="route-page-preview__ledger"><span>One vision / three forces</span><ol><li><b>01</b> Strategy</li><li><b>02</b> Design</li><li><b>03</b> Technology</li></ol></aside><div class="route-page-preview__cue"><span>Discover our world</span><i>↓</i></div>';
         document.querySelector('.reality')?.appendChild(preview);
       }
       if (url.pathname.endsWith('/premium.html')) {
+        setNavigationActive('Experiences');
         const preview = document.createElement('div');
         preview.className = 'route-page-preview route-page-preview--premium';
         preview.innerHTML = '<div class="route-page-preview__premium-sky" aria-hidden="true"></div><div class="route-page-preview__premium-veil" aria-hidden="true"></div><div class="route-page-preview__premium-portal" aria-hidden="true"><i></i><i></i><i></i></div><figure class="route-page-preview__premium-artifact" aria-hidden="true"><img src="assets/premium-portal.jpg" alt="" /></figure><div class="route-page-preview__frame" aria-hidden="true"></div><p class="route-page-preview__premium-eyebrow"><span>Private access</span><span>By Arkkhe</span></p><h2><span>Beyond</span><strong>ordinary</strong></h2><p class="route-page-preview__premium-intro">Rare places. Singular moments. Every journey imagined around one person: you.</p><aside class="route-page-preview__premium-edition"><span>Edition / 01</span><b>∞</b><p>Designed without limits.<br />Available by invitation.</p></aside><div class="route-page-preview__cue"><span>Enter the rare</span><i>↓</i></div>';
         document.querySelector('.reality')?.appendChild(preview);
-
-        const routeNav = document.querySelector('.topbar');
-        const leftLinks = routeNav?.querySelectorAll('.nav--left a');
-        leftLinks?.forEach((anchor) => anchor.classList.toggle('active', anchor.textContent.trim() === 'Experiences'));
-        const rightNav = routeNav?.querySelector('.nav--right');
-        if (rightNav) rightNav.innerHTML = '<a href="#privileges">Privileges</a><a href="#collection">Collection</a><a href="#contact">Contact</a>';
       }
       if (isTechnologyDestination) {
+        setNavigationActive('Technologies');
         const preview = document.createElement('div');
         preview.className = 'route-page-preview route-page-preview--technologies';
         preview.innerHTML = '<div class="route-page-preview__technology-image" aria-hidden="true"></div><div class="route-page-preview__technology-ground" aria-hidden="true"></div><div class="route-page-preview__technology-mesh" aria-hidden="true"></div><div class="route-page-preview__technology-scan" aria-hidden="true"></div><div class="route-page-preview__frame" aria-hidden="true"></div><p class="route-page-preview__technology-eyebrow"><span>Arkkhe / Applied imagination</span><span>São Paulo · Worldwide</span></p><h2><span>Technology</span><strong>that feels alive.</strong></h2><p class="route-page-preview__technology-intro">We turn intelligence, space and motion into experiences that respond, evolve and stay with you.</p><aside class="route-page-preview__technology-readout"><span>Live systems / 04</span><div><b>87</b><i>%</i></div><p>Human signal detected<br />Experience adapting</p></aside><div class="route-page-preview__technology-coordinates" aria-hidden="true"><span>23°33′S</span><span>046°38′W</span><span>FRAME / 001</span></div><div class="route-page-preview__technology-cue"><span>Enter the system</span><i>↓</i></div>';
         document.querySelector('.reality')?.appendChild(preview);
-
-        const routeNav = document.querySelector('.topbar');
-        routeNav?.querySelectorAll('a').forEach((anchor) => anchor.classList.remove('active'));
-        const rightNav = routeNav?.querySelector('.nav--right');
-        if (rightNav) rightNav.innerHTML = '<a class="active" href="#technologies">Technologies</a><a href="#research">Research</a><a href="#contact">Contact</a>';
       }
       document.querySelector('.enter')?.click();
       window.setTimeout(() => {

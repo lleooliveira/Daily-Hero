@@ -33,11 +33,18 @@ function selectSlide(index) {
 dots.forEach((dot) => dot.addEventListener('click', () => selectSlide(dot.dataset.slide)));
 cards.forEach((card) => card.addEventListener('click', () => selectSlide(card.dataset.index)));
 
-document.querySelector('.menu-button').addEventListener('click', (event) => {
-  const button = event.currentTarget;
-  const open = button.getAttribute('aria-expanded') === 'true';
-  button.setAttribute('aria-expanded', String(!open));
+const topbar = document.querySelector('.topbar');
+const menuButton = document.querySelector('.menu-button');
+menuButton.addEventListener('click', () => {
+  const isOpen = topbar.classList.toggle('menu-open');
+  menuButton.setAttribute('aria-expanded', String(isOpen));
+  document.body.style.overflow = isOpen ? 'hidden' : '';
 });
+document.querySelectorAll('.mobile-nav a').forEach((link) => link.addEventListener('click', () => {
+  topbar.classList.remove('menu-open');
+  menuButton.setAttribute('aria-expanded', 'false');
+  document.body.style.overflow = '';
+}));
 
 const hero = document.querySelector('.hero');
 const reality = document.querySelector('.reality');

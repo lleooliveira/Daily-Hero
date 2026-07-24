@@ -34,7 +34,7 @@ button,a { color:inherit; font:inherit; }
 .nav--left { padding-right:9vw; }.nav--right { padding-left:9vw; }
 .nav a { text-decoration:none; opacity:.52; transition:.25s ease; }.nav a:hover,.nav a.active { opacity:1; }
 .brand { width:44px;height:44px;display:grid;place-items:center;justify-self:center;transition:transform .4s ease;text-decoration:none;overflow:hidden; }.brand::before { content:"✣";font-family:Georgia,serif;font-size:44px;line-height:1;color:#ffe7dc; }.brand:hover { transform:rotate(30deg); }.brand img { display:none; }
-.menu-button { display:none; border:0;background:none; padding:8px; }.menu-button span { display:block;width:24px;height:1px;background:white;margin:6px; }
+.menu-button,.mobile-nav { display:none; }.menu-button { border:0;background:none; padding:8px; }.menu-button span { display:block;width:24px;height:1px;background:white;margin:6px;transition:.3s; }
 .intro { position:absolute; left:10.5%; top:17%; width:360px; z-index:3;translate:var(--content-x) var(--content-y);transition:translate .22s ease-out; }
 .intro h1 { margin:0; font-family:"Viaoda Libre",serif; font-weight:400; text-transform:uppercase; line-height:.88; letter-spacing:-.02em; text-shadow:0 2px 20px rgba(0,0,0,.25); }
 .intro h1 span { display:block; font-size:clamp(44px,4.15vw,64px); white-space:nowrap; }.intro h1 b { font-family:Arial,sans-serif;font-size:.7em;margin:0 10px; }.intro h1 strong { display:block;font:inherit;font-size:clamp(57px,5.35vw,82px); }
@@ -111,7 +111,9 @@ button,a { color:inherit; font:inherit; }
 @keyframes reality-title { from { opacity:0;letter-spacing:.25em;transform:translateY(-45px);clip-path:inset(0 50%); } }
 @keyframes ring-in { from { opacity:0;translate:80px 0;scale:.86; } }
 @media (max-width:900px) {
-  .topbar { display:flex;justify-content:space-between;padding:0 24px; }.nav { display:none; }.menu-button { display:block; }.brand { position:absolute;left:50%;transform:translateX(-50%); }
+  .topbar { display:flex;justify-content:space-between;padding:0 24px; }.nav { display:none; }.menu-button { display:block;z-index:2; }.brand { position:absolute;left:50%;z-index:2;transform:translateX(-50%); }.brand:hover { transform:translateX(-50%) rotate(30deg); }
+  .is-ready .topbar.menu-open { position:fixed;top:0;left:0;width:100%;z-index:100;opacity:1;transform:none;animation:none; }.topbar.menu-open .menu-button { position:relative;z-index:2; }
+  .mobile-nav { position:fixed;inset:0;z-index:1;padding:120px 30px 50px;background:rgba(16,14,10,.97);backdrop-filter:blur(20px);flex-direction:column;gap:24px; }.mobile-nav a { text-decoration:none;font:42px/1.05 "Viaoda Libre",serif;opacity:.5;transition:opacity .25s; }.mobile-nav a:hover,.mobile-nav a.active { opacity:1; }.topbar.menu-open .mobile-nav { display:flex; }.topbar.menu-open .menu-button span:first-child { transform:translateY(3.5px) rotate(45deg); }.topbar.menu-open .menu-button span:last-child { transform:translateY(-3.5px) rotate(-45deg); }
   .hero { min-height:820px;background-position:54% center; }.intro { left:7%;top:16%; }.carousel { left:34%;top:49%;width:90%; }.card { flex-basis:158px;height:172px;border-radius:32px; }.enter { bottom:2%; }
 }
 @media (max-width:560px) {
